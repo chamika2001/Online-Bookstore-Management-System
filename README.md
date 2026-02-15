@@ -35,6 +35,24 @@ After admin login, available actions:
 4. Delete a book
 5. View today's payments report
 
+## CRUD Operations (Books)
+- **Create**
+  - Admin menu -> `Add a new book`
+  - Adds a book with ID, ISBN, title, author, price, category, and stock.
+
+- **Read**
+  - Admin/User menu -> `View all books`
+  - Admin/User menu -> `Select category and view books`
+  - Displays current availability (`In Stock` / `Out of Stock`).
+
+- **Update**
+  - Admin menu -> `Update book details`
+  - Updates title, author, price, category (optional), and stock.
+
+- **Delete**
+  - Admin menu -> `Delete a book`
+  - Removes a book from inventory.
+
 ### User Process
 After user login, available actions:
 1. View all books (with availability)
