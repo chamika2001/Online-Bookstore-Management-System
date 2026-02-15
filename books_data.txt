@@ -1,0 +1,22 @@
+1001|ISBN-1001|Sepalika|P. B. Jayasekara|2100.0|Romance|14
+1002|ISBN-1002|IT ENDS WITH US|alex|2900.0|Romance|12
+1003|ISBN-1003|Verity|alex|3100.0|Action & Adventure|8
+1004|ISBN-1004|Onyx Storm|alex|3200.0|Action & Adventure|6
+1005|ISBN-1005|Jane Eyre|Manusha Ravishan|2600.0|Translations|10
+1006|ISBN-1006|Mudal Soyana Mole (Psychology of Money)|Poth Ekathuwa|2800.0|Social Science|7
+1007|ISBN-1007|Lavender|Poth Ekathuwa|2300.0|Short Stories|9
+1008|ISBN-1008|Rithuu|Poth Ekathuwa|2000.0|ChildrenAll|14
+1009|ISBN-1009|The Best American Humorous Short Stories|alex|2400.0|Short Stories|5
+1010|ISBN-1010|Amusements in Mathematics|alex|2250.0|Study Aids & Test Prep|11
+1011|ISBN-1011|Introduction to Numerical Methods|alex|2550.0|Technology & Engineering|10
+1012|ISBN-1012|An Elementary Study of Chemistry|alex|2450.0|Study Aids & Test Prep|10
+1013|ISBN-1013|Web Design Sinhala|Danuma Education|2600.0|Technology & Engineering|12
+1014|ISBN-1014|PHP Sinhalen|Danuma Education|2500.0|Technology & Engineering|9
+1015|ISBN-1015|Ebay Drop Shipping Sinhala|Danuma Education|2550.0|Teaching Methods & Materials|7
+1016|ISBN-1016|California Mexican-Spanish Cook Book|alex|2150.0|Travel|13
+1017|ISBN-1017|Duwana Rewula|Kids Book|1700.0|ChildrenAll|20
+1018|ISBN-1018|Apuru Soyuriyange Apuru Rahas|Poth Ekathuwa|2000.0|Action & Adventure|4
+1019|ISBN-1019|Persona|Poth Ekathuwa|2200.0|Art|6
+1020|ISBN-1020|Sports Mindset Basics|alex|2100.0|Sports & Recreation|8
+5005|ISBN-5005|Restart Test Book|Test Author|1500.0|Romance|5
+21|2001|Harry Potter|J K Rolling|2000.0|Translations|3

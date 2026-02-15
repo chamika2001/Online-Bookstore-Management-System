@@ -1,0 +1,4 @@
+persistUser|persist123
+chamika|2001
+isbnuser|isbnpass
+stockuser1|stockpass1
