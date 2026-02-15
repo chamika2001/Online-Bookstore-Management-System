@@ -82,22 +82,37 @@ Both files are loaded at startup, so data remains after restart.
   - `CreditCardPayment` and `CashOnDelivery` are concrete strategies.
   - `PaymentProcessor` is the strategy context used during checkout.
 
-## SOLID Principles Used
+## SOLID Principles (S.O.L.I.D)
 
-### S - Single Responsibility Principle (SRP)
-Each class has one clear responsibility:
-- `Book` -> book model data (id, ISBN, title, author, category, stock, price)
-- `BookStorage` -> book persistence and inventory operations
+### S - Single Responsibility Principle
+Each class has one main responsibility:
+- `Book` -> book data model (id, isbn, title, author, price, category, stock)
+- `BookStorage` -> store/load/update book data (`books_data.txt`)
 - `BookStore` -> singleton service layer for book operations
-- `AuthService` -> login and registration logic
+- `AuthService` -> user registration/login and credential validation
 - `PaymentProcessor` -> executes selected payment strategy
 - `PaymentHistory` -> stores and reports payment records
-- `CartItem` -> one cart line item (book + quantity)
+- `Main` -> console menu flow and user interaction
 
-### O - Open/Closed Principle (OCP)
-The system is open for extension, closed for modification:
-- Payment flow uses `PaymentStrategy`, so new payment methods can be added by creating a new strategy class without changing checkout core logic.
-- Category-based and inventory logic are centralized in storage/service classes, so behavior can be extended (new filters, reports, validation rules) with minimal changes to existing classes.
+### O - Open/Closed Principle
+System is open for extension without changing core logic:
+- `PaymentStrategy` allows adding new payment methods by creating new classes (for example, `UPIPayment`) without changing checkout structure.
+- Category list and seeded data can be extended in `BookStorage` without changing business flow in `Main`.
+
+### L - Liskov Substitution Principle
+Concrete payment strategies can replace each other safely:
+- `CreditCardPayment` and `CashOnDelivery` both implement `PaymentStrategy`.
+- `PaymentProcessor` can call `process()` with any `PaymentStrategy` implementation.
+
+### I - Interface Segregation Principle
+Clients use a focused interface:
+- `PaymentStrategy` has a single method `pay(double amount)`.
+- Payment classes implement only what they need, with no unused methods.
+
+### D - Dependency Inversion Principle
+High-level checkout logic depends on abstraction, not concrete payment classes:
+- `PaymentProcessor` depends on `PaymentStrategy` interface.
+- `Main` selects concrete strategies but executes payment via `PaymentProcessor` + `PaymentStrategy` abstraction.
 
 ## Updated Text-based UML Diagram
 ```text
