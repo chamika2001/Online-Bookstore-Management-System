@@ -82,14 +82,22 @@ Both files are loaded at startup, so data remains after restart.
   - `CreditCardPayment` and `CashOnDelivery` are concrete strategies.
   - `PaymentProcessor` is the strategy context used during checkout.
 
-## SOLID (SRP) Summary
-- `Book` -> book model data
-- `BookStorage` -> persistence + storage operations
-- `BookStore` -> singleton access layer to storage
-- `AuthService` -> registration/login logic
-- `PaymentProcessor` + strategy classes -> payment behavior
-- `PaymentHistory` -> payment report records
-- `Main` -> menu flow and input orchestration
+## SOLID Principles Used
+
+### S - Single Responsibility Principle (SRP)
+Each class has one clear responsibility:
+- `Book` -> book model data (id, ISBN, title, author, category, stock, price)
+- `BookStorage` -> book persistence and inventory operations
+- `BookStore` -> singleton service layer for book operations
+- `AuthService` -> login and registration logic
+- `PaymentProcessor` -> executes selected payment strategy
+- `PaymentHistory` -> stores and reports payment records
+- `CartItem` -> one cart line item (book + quantity)
+
+### O - Open/Closed Principle (OCP)
+The system is open for extension, closed for modification:
+- Payment flow uses `PaymentStrategy`, so new payment methods can be added by creating a new strategy class without changing checkout core logic.
+- Category-based and inventory logic are centralized in storage/service classes, so behavior can be extended (new filters, reports, validation rules) with minimal changes to existing classes.
 
 ## Updated Text-based UML Diagram
 ```text
